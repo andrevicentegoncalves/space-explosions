@@ -1,3 +1,5 @@
+package bellosqueues.spaceexplosions;
+
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Asteroid {
