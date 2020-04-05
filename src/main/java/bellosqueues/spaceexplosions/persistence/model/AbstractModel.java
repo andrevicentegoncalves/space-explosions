@@ -1,24 +1,34 @@
 package bellosqueues.spaceexplosions.persistence.model;
 
+import bellosqueues.spaceexplosions.services.utilities.Direction;
+
 /**
  * Common properties and methods between our 3 objects: Player(Our spaceship), Enemy(Enemy spaceships) and Obstacles(Asteroids in the beginning)
  */
 public abstract class AbstractModel implements Model{
 
-    private int positionX;
-    private int positionY;
+    private AbstractPosition position;
     private int speed;
     private int damage;
 
     /**
      * Getters and Setters
      */
+
+    public AbstractPosition getPosition() {
+        return position;
+    }
+
+    public void setPosition(AbstractPosition position) {
+        this.position = position;
+    }
+
     public int getPositionX() {
-      return positionX;
+        return position.getCol();
     }
 
     public int getPositionY() {
-      return positionY;
+      return position.getRow();
     }
 
     public int getSpeed() {
@@ -30,11 +40,11 @@ public abstract class AbstractModel implements Model{
     }
 
     public void setPositionX(int positionX) {
-      this.positionX = positionX;
+      position.setCol(positionX);
     }
 
     public void setPositionY(int positionY) {
-      this.positionY = positionY;
+      position.setRow(positionY);
     }
 
     public void setSpeed(int speed) {
@@ -45,4 +55,8 @@ public abstract class AbstractModel implements Model{
       this.damage = damage;
     }
 
+    @Override
+    public void move(Direction direction) {
+
+    }
 }

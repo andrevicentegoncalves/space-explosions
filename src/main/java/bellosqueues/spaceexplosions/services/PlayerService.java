@@ -1,24 +1,26 @@
 package bellosqueues.spaceexplosions.services;
 
+import bellosqueues.spaceexplosions.persistence.model.Player;
+import bellosqueues.spaceexplosions.services.utilities.Direction;
+
 public class PlayerService {
 
+  private Player player;
 
-
-
-  public void moveUP(){
-
+  public void movePlayer(Direction direction){
+      player.move(direction);
   }
 
-  public void moveDown(){
+  /**
+   *
+   * @return Getters e Setters
+   */
 
+  public Player getPlayer() {
+    return player;
   }
 
-  public void moveLeft(){
-
+  public void setPlayer(Player player) {
+    this.player = player;
   }
-
-  public void moveRight(){
-
-  }
-
 }

@@ -1,5 +1,7 @@
 package bellosqueues.spaceexplosions.persistence.model;
 
+import bellosqueues.spaceexplosions.services.utilities.Direction;
+
 /**
  * Programming for the Interface
  */
@@ -21,4 +23,5 @@ public interface Model {
 
    void setDamage(int damage);
 
+   void move(Direction direction);
 }

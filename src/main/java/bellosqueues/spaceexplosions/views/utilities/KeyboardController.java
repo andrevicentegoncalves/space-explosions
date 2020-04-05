@@ -1,6 +1,7 @@
 package bellosqueues.spaceexplosions.views.utilities;
 
 import bellosqueues.spaceexplosions.services.GameEngineService;
+import bellosqueues.spaceexplosions.services.PlayerService;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -10,6 +11,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 public class KeyboardController implements KeyboardHandler {
 
   private GameEngineService game;
+  private PlayerService playerService;
 
   KeyboardController(GameEngineService game){
     this.game = game;
@@ -64,25 +66,25 @@ public class KeyboardController implements KeyboardHandler {
     switch (event.getKey()){
       // MOVE UP
       case KeyboardEvent.KEY_UP:
-        game.move(Direction.UP);
+        playerService.movePlayer(Direction.UP);
 
         break;
 
       // MOVE DOWN
       case KeyboardEvent.KEY_DOWN:
-        game.move(Direction.DOWN);
+        playerService.movePlayer(Direction.DOWN);
 
         break;
 
       // MOVE LEFT
       case KeyboardEvent.KEY_LEFT:
-        game.move(Direction.LEFT);
+        playerService.movePlayer(Direction.LEFT);
 
         break;
 
       // MOVE RIGHT
       case KeyboardEvent.KEY_RIGHT:
-        game.move(Direction.RIGHT);
+        playerService.movePlayer(Direction.RIGHT);
 
         break;
 
@@ -123,5 +125,20 @@ public class KeyboardController implements KeyboardHandler {
   public void keyReleased(KeyboardEvent keyboardEvent) {
   }
 
+  public GameEngineService getGame() {
+    return game;
+  }
+
+  public void setGame(GameEngineService game) {
+    this.game = game;
+  }
+
+  public PlayerService getPlayerService() {
+    return playerService;
+  }
+
+  public void setPlayerService(PlayerService playerService) {
+    this.playerService = playerService;
+  }
 }
 

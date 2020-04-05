@@ -33,27 +33,6 @@ public class GameEngineService {
   }
 
   /**
-   * Move Direction
-   * @param direction
-   */
-  public void move(Direction direction){
-    switch (direction){
-      case UP:
-        player.moveUP();
-        break;
-      case DOWN:
-        player.moveDown();
-        break;
-      case LEFT:
-        player.moveLeft();
-        break;
-      case RIGHT:
-        player.moveRight();
-        break;
-    }
-  }
-
-  /**
    * Keyboard Boolean Key to Start Game
    * @return
    */
