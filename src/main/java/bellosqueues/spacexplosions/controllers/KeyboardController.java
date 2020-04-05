@@ -5,7 +5,7 @@ import bellosqueues.spacexplosions.services.PlayerService;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
-import bellosqueues.spacexplosions.utilities.Direction;
+import bellosqueues.spacexplosions.utilities.Directions;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class KeyboardController implements KeyboardHandler {
@@ -66,25 +66,25 @@ public class KeyboardController implements KeyboardHandler {
     switch (event.getKey()){
       // MOVE UP
       case KeyboardEvent.KEY_UP:
-        playerService.movePlayer(Direction.UP);
+        playerService.movePlayer(Directions.UP);
 
         break;
 
       // MOVE DOWN
       case KeyboardEvent.KEY_DOWN:
-        playerService.movePlayer(Direction.DOWN);
+        playerService.movePlayer(Directions.DOWN);
 
         break;
 
       // MOVE LEFT
       case KeyboardEvent.KEY_LEFT:
-        playerService.movePlayer(Direction.LEFT);
+        playerService.movePlayer(Directions.LEFT);
 
         break;
 
       // MOVE RIGHT
       case KeyboardEvent.KEY_RIGHT:
-        playerService.movePlayer(Direction.RIGHT);
+        playerService.movePlayer(Directions.RIGHT);
 
         break;
 

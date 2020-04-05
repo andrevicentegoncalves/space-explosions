@@ -1,6 +1,6 @@
 package bellosqueues.spacexplosions.persistence.model;
 
-import bellosqueues.spacexplosions.utilities.Direction;
+import bellosqueues.spacexplosions.utilities.Directions;
 
 /**
  * Programming for the Interface
@@ -23,7 +23,7 @@ public interface Model {
 
    void setDamage(int damage);
 
-   void move(Direction direction);
+   void move(Directions direction);
 
    void explode();
 }

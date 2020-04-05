@@ -15,4 +15,5 @@ public class Player extends AbstractModel{
     this.hitPoints = hitPoints;
   }
 
+
 }
