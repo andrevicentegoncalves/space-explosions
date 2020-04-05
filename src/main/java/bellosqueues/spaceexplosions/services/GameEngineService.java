@@ -62,7 +62,7 @@ public class GameEngineService {
   }
 
   /**
-   * Keyboard Boolean Key to Restart
+   * Keyboard Boolean Key to Restart Game
    * @return
    */
   public boolean isKeyRestart(){
@@ -78,7 +78,7 @@ public class GameEngineService {
   }
 
   /**
-   *    * Keyboard Boolean to Fire
+   * Keyboard Boolean to Fire
    * @return
    */
   public boolean isKeyFire() {

@@ -36,23 +36,18 @@ public class KeyboardController implements KeyboardHandler {
     events[3].setKey(KeyboardEvent.KEY_RIGHT);
     events[3].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    // Start Game
     events[4].setKey(KeyboardEvent.KEY_SPACE);
     events[4].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    // Restart Game
     events[5].setKey(KeyboardEvent.KEY_R);
     events[5].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    //Mute Music
     events[6].setKey(KeyboardEvent.KEY_M);
     events[6].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    //Quit Game
     events[7].setKey(KeyboardEvent.KEY_Q);
     events[7].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    // Fire
     events[8].setKey(KeyboardEvent.KEY_F);
     events[8].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
@@ -96,22 +91,25 @@ public class KeyboardController implements KeyboardHandler {
         if(game.isKeySpace() == true) {
           //game.setStartMainMenu();
           game.start();
-        }
+      }
         break;
 
       // RESTART GAME
       case KeyboardEvent.KEY_R:
         if(game.isKeyRestart() == true) {
+
         }
 
         // MUTE
       case KeyboardEvent.KEY_M:
         if(game.isKeyMute() == true) {
+
         }
 
         // FIRE
       case KeyboardEvent.KEY_F:
         if(game.isKeyFire() == true) {
+
         }
 
         // QUIT
