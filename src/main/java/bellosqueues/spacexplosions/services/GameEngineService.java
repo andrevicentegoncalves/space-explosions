@@ -1,5 +1,7 @@
 package bellosqueues.spacexplosions.services;
 
+import bellosqueues.spacexplosions.views.MainMenuView;
+
 public class GameEngineService {
 
   private PlayerService player;
@@ -12,14 +14,18 @@ public class GameEngineService {
   private boolean keyRestart;
   private boolean keyMute;
   private boolean keyFire;
-
+  private MainMenuView menuView;
+  private MapService mapService;
 
   /**
    * Game Initialization
    */
   public void init(){
 
-    // StartMenu
+      menuView.show();
+      mapService.init();
+
+
 
   }
 

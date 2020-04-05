@@ -1,6 +1,6 @@
 package bellosqueues.spacexplosions.utilities;
 
-public enum Direction {
+public enum Directions {
   UP ,
   DOWN ,
   LEFT ,

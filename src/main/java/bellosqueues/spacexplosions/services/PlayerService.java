@@ -1,13 +1,13 @@
 package bellosqueues.spacexplosions.services;
 
 import bellosqueues.spacexplosions.persistence.model.Player;
-import bellosqueues.spacexplosions.utilities.Direction;
+import bellosqueues.spacexplosions.utilities.Directions;
 
 public class PlayerService {
 
   private Player player;
 
-  public void movePlayer(Direction direction){
+  public void movePlayer(Directions direction){
       player.move(direction);
   }
 

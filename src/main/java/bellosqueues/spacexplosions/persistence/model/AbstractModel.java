@@ -1,7 +1,7 @@
 package bellosqueues.spacexplosions.persistence.model;
 
 import bellosqueues.spacexplosions.persistence.model.position.AbstractPosition;
-import bellosqueues.spacexplosions.utilities.Direction;
+import bellosqueues.spacexplosions.utilities.Directions;
 
 /**
  * Common properties and methods between our 3 objects: Player(Our spaceship), Enemy(Enemy spaceships) and Obstacles(Asteroids in the beginning)
@@ -57,7 +57,7 @@ public abstract class AbstractModel implements Model{
     }
 
     @Override
-    public void move(Direction direction) {
+    public void move(Directions direction) {
 
     }
 
