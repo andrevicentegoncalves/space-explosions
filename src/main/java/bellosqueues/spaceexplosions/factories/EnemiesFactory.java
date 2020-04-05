@@ -1,9 +1,9 @@
 package bellosqueues.spaceexplosions.factories;
 
-import bellosqueues.spaceexplosions.Asteroid;
-import bellosqueues.spaceexplosions.model.Enemy;
-import bellosqueues.spaceexplosions.model.Obstacles;
-import bellosqueues.spaceexplosions.model.ObstaclesTypes;
+import bellosqueues.spaceexplosions.persistence.model.enemies.Asteroid;
+import bellosqueues.spaceexplosions.persistence.model.enemies.Enemy;
+import bellosqueues.spaceexplosions.persistence.model.enemies.Obstacles;
+import bellosqueues.spaceexplosions.persistence.model.enemies.ObstaclesTypes;
 
 public class EnemiesFactory<T> {
 

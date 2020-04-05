@@ -1,6 +1,5 @@
-package bellosqueues.spaceexplosions;
+package bellosqueues.spaceexplosions.persistence.model.enemies;
 
-import bellosqueues.spaceexplosions.model.Obstacles;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Asteroid extends Obstacles {
