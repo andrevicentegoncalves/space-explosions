@@ -17,7 +17,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>bellosqueues.spaceexplosions.Game</mainClass>
+                            <mainClass>bellosqueues.spacexplosions.Game</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
