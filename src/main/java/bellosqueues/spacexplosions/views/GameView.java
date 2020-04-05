@@ -1,13 +1,24 @@
 package bellosqueues.spacexplosions.views;
 
+import bellosqueues.spacexplosions.persistence.model.Player;
+import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
 import bellosqueues.spacexplosions.services.MapService;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameView {
 
-  Picture background = new Picture(10,10,"src/main/resources/images/space_arena.jpg");
 
-  public void show(){
+    private Picture background = new Picture(10,10, "images/space_arena.jpg");
+    private Picture player;
+
+    public GameView(Player player){
+        SimpleGfxPosition pos = new SimpleGfxPosition(player.getPosition());
+        this.player = new Picture(pos.getCol(), pos.getRow(), "images/ship.png");
+    }
+
+
+    public void show(){
+
 
         /**
          TODO
@@ -15,9 +26,12 @@ public class GameView {
          player && obstacles
          */
 
-    MapService mapService = new MapService(28,10);
-    mapService.init();
-    background.draw();
+
+
+        MapService mapService = new MapService(28,10);
+        mapService.init();
+        background.draw();
+        player.draw();
 
     }
 
