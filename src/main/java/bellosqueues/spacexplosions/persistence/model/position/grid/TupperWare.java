@@ -1,4 +1,7 @@
-package bellosqueues.spacexplosions.persistence.model.position;
+package bellosqueues.spacexplosions.persistence.model.position.grid;
+
+import bellosqueues.spacexplosions.persistence.model.position.Position;
+import bellosqueues.spacexplosions.persistence.model.position.grid.Cell;
 
 import java.util.HashMap;
 import java.util.Iterator;
