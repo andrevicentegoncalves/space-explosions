@@ -7,7 +7,7 @@ public class Asteroid extends Obstacles {
     private Picture picture;
 
     public Asteroid(int x, int y){
-        picture = new Picture(x, y,"asteroids.png");
+        picture = new Picture(x, y, "images/asteroids.png");
         picture.draw();
     }
 
