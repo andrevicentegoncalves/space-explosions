@@ -2,6 +2,7 @@ package bellosqueues.spacexplosions.controllers;
 
 import bellosqueues.spacexplosions.services.GameEngineService;
 import bellosqueues.spacexplosions.services.PlayerService;
+import bellosqueues.spacexplosions.views.GameView;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -12,15 +13,16 @@ public class KeyboardController implements KeyboardHandler {
 
   private GameEngineService game;
   private PlayerService playerService;
+  private GameView gameView;
 
-  KeyboardController(GameEngineService game){
+  public KeyboardController(GameEngineService game){
     this.game = game;
     listenerInit();
   }
 
   public void listenerInit(){
 
-    KeyboardEvent[] events = new KeyboardEvent[8];
+    KeyboardEvent[] events = new KeyboardEvent[9];
 
     for (int i = 0; i < events.length; i++) {
       events[i] = new KeyboardEvent();
@@ -66,24 +68,28 @@ public class KeyboardController implements KeyboardHandler {
     switch (event.getKey()){
       // MOVE UP
       case KeyboardEvent.KEY_UP:
+        gameView.moveView(Directions.UP);
         playerService.movePlayer(Directions.UP);
 
         break;
 
       // MOVE DOWN
       case KeyboardEvent.KEY_DOWN:
+        gameView.moveView(Directions.DOWN);
         playerService.movePlayer(Directions.DOWN);
 
         break;
 
       // MOVE LEFT
       case KeyboardEvent.KEY_LEFT:
+        gameView.moveView(Directions.LEFT);
         playerService.movePlayer(Directions.LEFT);
 
         break;
 
       // MOVE RIGHT
       case KeyboardEvent.KEY_RIGHT:
+        gameView.moveView(Directions.RIGHT);
         playerService.movePlayer(Directions.RIGHT);
 
         break;
@@ -139,6 +145,10 @@ public class KeyboardController implements KeyboardHandler {
 
   public void setPlayerService(PlayerService playerService) {
     this.playerService = playerService;
+  }
+
+  public void setGameView(GameView gameView) {
+    this.gameView = gameView;
   }
 }
 

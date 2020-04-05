@@ -59,6 +59,18 @@ public abstract class AbstractModel implements Model{
     @Override
     public void move(Directions direction) {
 
+        switch (direction) {
+
+            case UP:
+                setPositionY(-1);
+            case DOWN:
+                setPositionY(+1);
+            case LEFT:
+                setPositionX(-1);
+            case RIGHT:
+                setPositionX(+1);
+        }
+
     }
 
     @Override

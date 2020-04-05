@@ -1,10 +1,11 @@
 package bellosqueues.spacexplosions;
 
+import bellosqueues.spacexplosions.controllers.KeyboardController;
 import bellosqueues.spacexplosions.persistence.model.Player;
-import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
 import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
+import bellosqueues.spacexplosions.services.GameEngineService;
+import bellosqueues.spacexplosions.services.PlayerService;
 import bellosqueues.spacexplosions.views.GameView;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Game {
 
@@ -26,6 +27,13 @@ public class Game {
         player.setPosition(new LogicPosition(1,4));
 
         GameView test = new GameView(player);
+
+        PlayerService playerService = new PlayerService();
+        GameEngineService game = new GameEngineService();
+        KeyboardController kb = new KeyboardController(game);
+        kb.setPlayerService(playerService);
+        kb.setGameView(test);
+
         test.show();
     }
 
