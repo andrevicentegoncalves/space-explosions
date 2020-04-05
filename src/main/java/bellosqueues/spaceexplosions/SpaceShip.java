@@ -1,4 +1,6 @@
 package bellosqueues.spaceexplosions;
 
-public class SpaceShip {
+import bellosqueues.spaceexplosions.model.AbstractModel;
+
+public class SpaceShip extends AbstractModel {
 }
