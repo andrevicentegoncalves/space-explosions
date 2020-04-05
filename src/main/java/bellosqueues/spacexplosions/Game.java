@@ -1,12 +1,16 @@
 package bellosqueues.spacexplosions;
 
+import bellosqueues.spacexplosions.persistence.model.Player;
 import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
+import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
+import bellosqueues.spacexplosions.views.GameView;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Game {
 
     public static void main(String[] args) {
 
+        /*
         Picture background = new Picture(10,10, "images/space_arena.png");
         background.draw();
 
@@ -17,7 +21,12 @@ public class Game {
         Asteroid ast1 = new Asteroid(300, 200);
         Asteroid ast2 = new Asteroid(500, 300);
         Asteroid ast3 = new Asteroid(400, 100);
+*/
+        Player player = new Player();
+        player.setPosition(new LogicPosition(1,4));
 
+        GameView test = new GameView(player);
+        test.show();
     }
 
 }
