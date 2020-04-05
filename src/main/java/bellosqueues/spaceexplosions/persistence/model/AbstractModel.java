@@ -1,5 +1,6 @@
 package bellosqueues.spaceexplosions.persistence.model;
 
+import bellosqueues.spaceexplosions.persistence.model.position.AbstractPosition;
 import bellosqueues.spaceexplosions.services.utilities.Direction;
 
 /**
@@ -57,6 +58,11 @@ public abstract class AbstractModel implements Model{
 
     @Override
     public void move(Direction direction) {
+
+    }
+
+    @Override
+    public void explode() {
 
     }
 }

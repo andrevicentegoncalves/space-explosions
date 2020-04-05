@@ -1,6 +1,8 @@
-package bellosqueues.spaceexplosions.persistence.model;
+package bellosqueues.spaceexplosions.persistence.model.position;
 
-public abstract class AbstractPosition implements Position{
+import bellosqueues.spaceexplosions.persistence.model.position.Position;
+
+public abstract class AbstractPosition implements Position {
 
     private int col;
     private int row;

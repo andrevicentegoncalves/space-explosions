@@ -24,4 +24,6 @@ public interface Model {
    void setDamage(int damage);
 
    void move(Direction direction);
+
+   void explode();
 }

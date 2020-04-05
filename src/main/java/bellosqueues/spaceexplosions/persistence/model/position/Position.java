@@ -1,4 +1,4 @@
-package bellosqueues.spaceexplosions.persistence.model;
+package bellosqueues.spaceexplosions.persistence.model.position;
 
 public interface Position {
 
