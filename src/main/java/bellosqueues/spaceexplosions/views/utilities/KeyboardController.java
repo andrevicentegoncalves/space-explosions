@@ -102,13 +102,16 @@ public class KeyboardController implements KeyboardHandler {
       // RESTART GAME
       case KeyboardEvent.KEY_R:
         if(game.isKeyRestart() == true) {
-          game.start();
+        }
+
+        // MUTE
+      case KeyboardEvent.KEY_M:
+        if(game.isKeyMute() == true) {
         }
 
         // FIRE
       case KeyboardEvent.KEY_F:
         if(game.isKeyFire() == true) {
-          game.start();
         }
 
         // QUIT
