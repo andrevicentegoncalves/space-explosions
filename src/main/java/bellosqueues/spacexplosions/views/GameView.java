@@ -1,6 +1,7 @@
 package bellosqueues.spacexplosions.views;
 
 import bellosqueues.spacexplosions.services.MapService;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameView {
 
@@ -9,11 +10,16 @@ public class GameView {
     background
     player && obstacles
     */
-    public static void main(String[] args) {
+
+  public static void main(String[] args) {
+
+        Picture background = new Picture(10,10,"src/main/resources/images/space_arena.png");
 
         MapService mapService = new MapService(28,8);
         mapService.init();
+        background.draw();
 
-    }
+
+  }
 
 }

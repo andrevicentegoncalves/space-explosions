@@ -14,7 +14,6 @@ public class MapService {
   private int cols;
   private int rows;
 
-  private Picture background = new Picture(10,10,"src/main/resources/images/space_arena.png");
 
   public MapService(int cols, int rows){
       this.cols = cols;
@@ -24,7 +23,6 @@ public class MapService {
   public void init(){
 
       map = new Map(cols, rows);
-      background.draw();
       mapPosition = new LogicPosition(cols, rows);
 
   }
