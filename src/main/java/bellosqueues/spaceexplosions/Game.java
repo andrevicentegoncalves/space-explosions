@@ -7,11 +7,11 @@ public class Game {
 
     public static void main(String[] args) {
 
-        Picture background = new Picture(10,10, "space_arena.png");
+        Picture background = new Picture(10,10, "images/space_arena.png");
         background.draw();
 
 
-        Picture ship = new Picture(50,200, "ship.png");
+        Picture ship = new Picture(50,200, "images/ship.png");
         ship.draw();
 
         Asteroid ast1 = new Asteroid(300, 200);
