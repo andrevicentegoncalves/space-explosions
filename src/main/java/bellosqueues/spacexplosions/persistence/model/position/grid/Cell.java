@@ -1,5 +1,6 @@
-package bellosqueues.spacexplosions.persistence.model.position;
+package bellosqueues.spacexplosions.persistence.model.position.grid;
 
+import bellosqueues.spacexplosions.persistence.model.position.Position;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 

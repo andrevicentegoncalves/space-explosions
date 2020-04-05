@@ -1,4 +1,6 @@
-package bellosqueues.spacexplosions.persistence.model.position;
+package bellosqueues.spacexplosions.persistence.model.position.grid;
+
+import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
 
 public class Map {
 

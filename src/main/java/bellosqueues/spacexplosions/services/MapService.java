@@ -1,8 +1,7 @@
 package bellosqueues.spacexplosions.services;
 
   import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
-  import bellosqueues.spacexplosions.persistence.model.position.Map;
-  import bellosqueues.spacexplosions.persistence.model.position.Position;
+  import bellosqueues.spacexplosions.persistence.model.position.grid.Map;
   import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
