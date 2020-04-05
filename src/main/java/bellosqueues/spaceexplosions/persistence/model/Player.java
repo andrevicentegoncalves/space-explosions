@@ -1,4 +1,4 @@
-package bellosqueues.spaceexplosions.model;
+package bellosqueues.spaceexplosions.persistence.model;
 
 /**
  * Our spaceship

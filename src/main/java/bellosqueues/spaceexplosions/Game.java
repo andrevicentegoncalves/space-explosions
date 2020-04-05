@@ -1,5 +1,6 @@
 package bellosqueues.spaceexplosions;
 
+import bellosqueues.spaceexplosions.persistence.model.enemies.Asteroid;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Game {

@@ -1,4 +1,4 @@
-package bellosqueues.spaceexplosions.model;
+package bellosqueues.spaceexplosions.persistence.model;
 
 /**
  * Programming for the Interface

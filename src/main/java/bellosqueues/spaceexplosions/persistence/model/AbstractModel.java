@@ -1,4 +1,4 @@
-package bellosqueues.spaceexplosions.model;
+package bellosqueues.spaceexplosions.persistence.model;
 
 /**
  * Common properties and methods between our 3 objects: Player(Our spaceship), Enemy(Enemy spaceships) and Obstacles(Asteroids in the beginning)
