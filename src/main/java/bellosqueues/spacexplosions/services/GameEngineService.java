@@ -23,9 +23,6 @@ public class GameEngineService {
   public void init(){
 
       menuView.show();
-      mapService.init();
-
-
 
   }
 
