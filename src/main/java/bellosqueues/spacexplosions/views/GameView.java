@@ -7,7 +7,8 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameView {
 
-    private Picture background = new Picture(10,10, "images/space_arena.png");
+
+    private Picture background = new Picture(10,10, "images/space_arena.jpg");
     private Picture player;
 
     public GameView(Player player){
@@ -18,6 +19,7 @@ public class GameView {
 
     public void show(){
 
+
         /**
          TODO
          background
@@ -25,10 +27,12 @@ public class GameView {
          */
 
 
-        MapService mapService = new MapService(28,8);
+
+        MapService mapService = new MapService(28,10);
         mapService.init();
         background.draw();
         player.draw();
+
     }
 
 }
