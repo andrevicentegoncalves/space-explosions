@@ -3,7 +3,7 @@ package bellosqueues.spaceexplosions.model;
 /**
  * Enemy Spaceships class
  */
-public class Enemy {
+public class Enemy extends Obstacles {
 
   private int hitPoints;
 
