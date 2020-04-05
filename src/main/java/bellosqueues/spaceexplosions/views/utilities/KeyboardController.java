@@ -100,19 +100,19 @@ public class KeyboardController implements KeyboardHandler {
 
         }
 
-        // MUTE
+      // MUTE
       case KeyboardEvent.KEY_M:
         if(game.isKeyMute() == true) {
 
         }
 
-        // FIRE
+      // FIRE
       case KeyboardEvent.KEY_F:
         if(game.isKeyFire() == true) {
 
         }
 
-        // QUIT
+      // QUIT
       case KeyboardEvent.KEY_Q:
         System.exit(1);
         break;
