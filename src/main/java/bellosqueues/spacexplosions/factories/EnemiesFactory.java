@@ -4,8 +4,16 @@ import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
 import bellosqueues.spacexplosions.persistence.model.enemies.Enemy;
 import bellosqueues.spacexplosions.persistence.model.enemies.Obstacles;
 import bellosqueues.spacexplosions.persistence.model.enemies.ObstaclesTypes;
+import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
+import bellosqueues.spacexplosions.persistence.model.position.Position;
 
 public class EnemiesFactory<T> {
+
+    LogicPosition position;
+
+    public EnemiesFactory(LogicPosition position){
+        this.position = position;
+    }
 
     public Obstacles displayEnemies(ObstaclesTypes obstaclesTypes){
 
@@ -14,7 +22,7 @@ public class EnemiesFactory<T> {
                 return new Enemy();
 
             case ASTEROID:
-                return new Asteroid((int)Math.random()*500,(int)Math.random()*500);
+                return new Asteroid(position);
 
         }
 
