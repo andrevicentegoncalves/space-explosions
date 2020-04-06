@@ -63,12 +63,16 @@ public abstract class AbstractModel implements Model{
 
             case UP:
                 setPositionY(-1);
+                break;
             case DOWN:
                 setPositionY(+1);
+                break;
             case LEFT:
                 setPositionX(-1);
+                break;
             case RIGHT:
                 setPositionX(+1);
+                break;
         }
 
     }
