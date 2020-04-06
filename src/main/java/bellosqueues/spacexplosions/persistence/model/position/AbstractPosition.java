@@ -14,15 +14,15 @@ public abstract class AbstractPosition implements Position {
         return col;
     }
 
-    public void setCol(int col) {
-        this.col = col;
+    public void setCol(int dif) {
+        this.col += dif;
     }
 
     public int getRow() {
         return row;
     }
 
-    public void setRow(int row) {
-        this.row = row;
+    public void setRow(int dif) {
+        this.row += dif;
     }
 }

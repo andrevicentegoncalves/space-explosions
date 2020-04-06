@@ -3,6 +3,7 @@ package bellosqueues.spacexplosions.views;
 import bellosqueues.spacexplosions.persistence.model.Player;
 import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
 import bellosqueues.spacexplosions.services.MapService;
+import bellosqueues.spacexplosions.utilities.Directions;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameView {
@@ -24,7 +25,7 @@ public class GameView {
          background
          player && obstacles
          */
-        
+
         MapService mapService = new MapService(28,10);
         mapService.init();
         background.draw();
@@ -32,4 +33,18 @@ public class GameView {
 
     }
 
+    public void moveView(Directions direction) {
+
+        switch (direction) {
+
+            case UP:
+                player.translate(0,-1);
+            case DOWN:
+                player.translate(0,+1);
+            case LEFT:
+                player.translate(-1,0);
+            case RIGHT:
+                player.translate(+1,0);
+        }
+    }
 }
