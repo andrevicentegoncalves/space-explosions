@@ -11,11 +11,9 @@ public class EnemiesFactory<T> {
 
     LogicPosition position;
 
-    public EnemiesFactory(LogicPosition position){
-        this.position = position;
-    }
+    public Obstacles displayEnemies(ObstaclesTypes obstaclesTypes, LogicPosition position){
 
-    public Obstacles displayEnemies(ObstaclesTypes obstaclesTypes){
+      this.position = position;
 
         switch (obstaclesTypes) {
             case ENEMY:

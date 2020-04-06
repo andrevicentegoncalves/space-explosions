@@ -11,7 +11,7 @@ public class GameEngineService {
   private Obstacles[] asteroidField;
   private LogicPosition position;
   private MapService map;
-  EnemiesFactory enemiesFactory = new EnemiesFactory(position);
+  EnemiesFactory enemiesFactory = new EnemiesFactory();
   private int cols;
   private int rows;
 
@@ -55,7 +55,7 @@ public class GameEngineService {
     asteroidField = new Obstacles[15];
 
     for (int i = 0; i < asteroidField.length; i++) {
-          asteroidField[i] = enemiesFactory.displayEnemies(ObstaclesTypes.ASTEROID);
+          asteroidField[i] = enemiesFactory.displayEnemies(ObstaclesTypes.ASTEROID, position);
       }
   }
 
