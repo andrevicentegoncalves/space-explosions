@@ -28,16 +28,16 @@ public class KeyboardController implements KeyboardHandler {
       events[i] = new KeyboardEvent();
     }
 
-    events[0].setKey(KeyboardEvent.KEY_UP);
+    events[0].setKey(KeyboardEvent.KEY_W);
     events[0].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    events[1].setKey(KeyboardEvent.KEY_DOWN);
+    events[1].setKey(KeyboardEvent.KEY_S);
     events[1].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    events[2].setKey(KeyboardEvent.KEY_LEFT);
+    events[2].setKey(KeyboardEvent.KEY_A);
     events[2].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
-    events[3].setKey(KeyboardEvent.KEY_RIGHT);
+    events[3].setKey(KeyboardEvent.KEY_D);
     events[3].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
     events[4].setKey(KeyboardEvent.KEY_SPACE);
@@ -67,28 +67,28 @@ public class KeyboardController implements KeyboardHandler {
 
     switch (event.getKey()){
       // MOVE UP
-      case KeyboardEvent.KEY_UP:
+      case KeyboardEvent.KEY_W:
         gameView.moveView(Directions.UP);
         playerService.movePlayer(Directions.UP);
 
         break;
 
       // MOVE DOWN
-      case KeyboardEvent.KEY_DOWN:
+      case KeyboardEvent.KEY_S:
         gameView.moveView(Directions.DOWN);
         playerService.movePlayer(Directions.DOWN);
 
         break;
 
       // MOVE LEFT
-      case KeyboardEvent.KEY_LEFT:
+      case KeyboardEvent.KEY_A:
         gameView.moveView(Directions.LEFT);
         playerService.movePlayer(Directions.LEFT);
 
         break;
 
       // MOVE RIGHT
-      case KeyboardEvent.KEY_RIGHT:
+      case KeyboardEvent.KEY_D:
         gameView.moveView(Directions.RIGHT);
         playerService.movePlayer(Directions.RIGHT);
 
@@ -96,7 +96,7 @@ public class KeyboardController implements KeyboardHandler {
 
       // START GAME
       case KeyboardEvent.KEY_SPACE:
-        if(game.isKeySpace() == true) {
+        if(game.isKeySpace()) {
           //game.setStartMainMenu();
           game.start();
       }
@@ -104,21 +104,24 @@ public class KeyboardController implements KeyboardHandler {
 
       // RESTART GAME
       case KeyboardEvent.KEY_R:
-        if(game.isKeyRestart() == true) {
+        if(game.isKeyRestart()) {
 
         }
+        break;
 
       // MUTE
       case KeyboardEvent.KEY_M:
-        if(game.isKeyMute() == true) {
+        if(game.isKeyMute()) {
 
         }
+        break;
 
       // FIRE
       case KeyboardEvent.KEY_F:
-        if(game.isKeyFire() == true) {
+        if(game.isKeyFire()) {
 
         }
+        break;
 
       // QUIT
       case KeyboardEvent.KEY_Q:

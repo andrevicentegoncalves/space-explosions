@@ -1,6 +1,7 @@
 package bellosqueues.spacexplosions.views;
 
 import bellosqueues.spacexplosions.persistence.model.Player;
+import bellosqueues.spacexplosions.persistence.model.position.grid.Map;
 import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
 import bellosqueues.spacexplosions.services.MapService;
 import bellosqueues.spacexplosions.utilities.Directions;
@@ -33,18 +34,22 @@ public class GameView {
 
     }
 
-    public void moveView(Directions direction) {
+   public void moveView(Directions direction) {
 
         switch (direction) {
 
             case UP:
-                player.translate(0,-1);
+                player.translate(0,-Map.CELLSIZE);
+                break;
             case DOWN:
-                player.translate(0,+1);
+                player.translate(0,+Map.CELLSIZE);
+                break;
             case LEFT:
-                player.translate(-1,0);
+                player.translate(-Map.CELLSIZE,0);
+                break;
             case RIGHT:
-                player.translate(+1,0);
+                player.translate(+Map.CELLSIZE,0);
+                break;
         }
     }
 }
