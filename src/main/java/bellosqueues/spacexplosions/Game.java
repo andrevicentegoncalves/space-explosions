@@ -29,6 +29,8 @@ public class Game {
         GameView test = new GameView(player);
 
         PlayerService playerService = new PlayerService();
+        playerService.setPlayer(player);
+
         GameEngineService game = new GameEngineService();
         KeyboardController kb = new KeyboardController(game);
         kb.setPlayerService(playerService);
