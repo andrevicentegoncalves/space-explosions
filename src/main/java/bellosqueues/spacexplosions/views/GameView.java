@@ -1,8 +1,10 @@
 package bellosqueues.spacexplosions.views;
 
 import bellosqueues.spacexplosions.persistence.model.Player;
+import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
 import bellosqueues.spacexplosions.persistence.model.position.grid.Map;
 import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
+import bellosqueues.spacexplosions.services.GameEngineService;
 import bellosqueues.spacexplosions.services.MapService;
 import bellosqueues.spacexplosions.utilities.Directions;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
@@ -12,6 +14,7 @@ public class GameView {
 
     private Picture background = new Picture(10,10, "images/space_arena.jpeg");
     private Picture player;
+
 
     public GameView(Player player){
         SimpleGfxPosition pos = new SimpleGfxPosition(player.getPosition());
@@ -27,8 +30,8 @@ public class GameView {
          player && obstacles
          */
 
-        MapService mapService = new MapService(28,10);
-        mapService.init();
+        GameEngineService gameEngineService = new GameEngineService(28,10);
+        gameEngineService.start();
         background.draw();
         player.draw();
 
