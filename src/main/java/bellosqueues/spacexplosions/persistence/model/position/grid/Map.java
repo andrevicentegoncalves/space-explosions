@@ -25,7 +25,7 @@ public class Map {
     for (int col = 0; col < rows; col++) {
       for (int row = 0; row < rows; row++) {
         LogicPosition position = new LogicPosition(col, row);
-        container.addCell(position);
+    //    container.addCell(position);
       }
     }
   }

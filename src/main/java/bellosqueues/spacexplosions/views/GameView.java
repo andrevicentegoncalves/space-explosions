@@ -11,14 +11,14 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GameView {
 
+    //Objects are drawn when positions are created, therefore this View will give positions to objects.
 
     private Picture background = new Picture(10,10, "images/space_arena.jpeg");
-    private Picture player;
+    private Player player;
 
 
     public GameView(Player player){
-        SimpleGfxPosition pos = new SimpleGfxPosition(player.getPosition());
-        this.player = new Picture(pos.getCol(), pos.getRow(), "images/ship.png");
+        this.player = player;
     }
 
 
@@ -33,12 +33,13 @@ public class GameView {
         GameEngineService gameEngineService = new GameEngineService(28,10);
         gameEngineService.start();
         background.draw();
-        player.draw();
+        player.setPosition(new SimpleGfxPosition(1,4, "/images/ship.png"));
+      //  player.draw();
 
     }
 
    public void moveView(Directions direction) {
-
+/*
         switch (direction) {
 
             case UP:
@@ -53,6 +54,6 @@ public class GameView {
             case RIGHT:
                 player.translate(+Map.CELLSIZE,0);
                 break;
-        }
+        }*/
     }
 }

@@ -4,6 +4,7 @@ import bellosqueues.spacexplosions.controllers.KeyboardController;
 import bellosqueues.spacexplosions.persistence.model.Player;
 import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
 import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
+import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
 import bellosqueues.spacexplosions.services.GameEngineService;
 import bellosqueues.spacexplosions.services.PlayerService;
 import bellosqueues.spacexplosions.views.GameView;
@@ -25,8 +26,6 @@ public class Game {
         Asteroid ast3 = new Asteroid(400, 100);
 */
         Player player = new Player();
-
-        player.setPosition(new LogicPosition(1,4));
 
         GameView test = new GameView(player);
 

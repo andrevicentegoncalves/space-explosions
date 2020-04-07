@@ -2,8 +2,8 @@ package bellosqueues.spacexplosions.persistence.model.position;
 
 public abstract class AbstractPosition implements Position {
 
-    private int col;
-    private int row;
+    protected int col;
+    protected int row;
 
     public AbstractPosition(int col, int row){
         this.col = col;

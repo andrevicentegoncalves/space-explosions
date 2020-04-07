@@ -13,9 +13,9 @@ public class TupperWare implements Iterable<Position>{
     hashMap = new HashMap<>();
   }
 
-  public void addCell(Position position){
+ /* public void addCell(Position position){
     hashMap.put(position, new SimpleGfxPosition(position));
-  }
+  }*/
 
   public void getCell(Position pos){
     hashMap.get(pos);

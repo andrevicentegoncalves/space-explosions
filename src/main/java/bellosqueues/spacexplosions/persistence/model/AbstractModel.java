@@ -1,6 +1,7 @@
 package bellosqueues.spacexplosions.persistence.model;
 
 import bellosqueues.spacexplosions.persistence.model.position.AbstractPosition;
+import bellosqueues.spacexplosions.persistence.model.position.Position;
 import bellosqueues.spacexplosions.utilities.Directions;
 
 /**
@@ -8,7 +9,7 @@ import bellosqueues.spacexplosions.utilities.Directions;
  */
 public abstract class AbstractModel implements Model{
 
-    private AbstractPosition position;
+    private Position position;
     private int speed;
     private int damage;
 
@@ -16,11 +17,17 @@ public abstract class AbstractModel implements Model{
      * Getters and Setters
      */
 
-    public AbstractPosition getPosition() {
+    public AbstractModel(){};
+
+    public AbstractModel(Position position){
+        this.position = position;
+    }
+
+    public Position getPosition() {
         return position;
     }
 
-    public void setPosition(AbstractPosition position) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 
