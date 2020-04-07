@@ -2,10 +2,7 @@ package bellosqueues.spacexplosions;
 
 import bellosqueues.spacexplosions.controllers.KeyboardController;
 import bellosqueues.spacexplosions.persistence.model.Player;
-import bellosqueues.spacexplosions.persistence.model.enemies.Asteroid;
-import bellosqueues.spacexplosions.persistence.model.position.LogicPosition;
-import bellosqueues.spacexplosions.persistence.model.position.grid.SimpleGfxPosition;
-import bellosqueues.spacexplosions.services.GameEngineService;
+import bellosqueues.spacexplosions.services.GameEngine;
 import bellosqueues.spacexplosions.services.PlayerService;
 import bellosqueues.spacexplosions.views.GameView;
 
@@ -25,19 +22,15 @@ public class Game {
         Asteroid ast2 = new Asteroid(500, 300);
         Asteroid ast3 = new Asteroid(400, 100);
 */
-        Player player = new Player();
-
-        GameView test = new GameView(player);
-
         PlayerService playerService = new PlayerService();
-        playerService.setPlayer(player);
 
-        GameEngineService game = new GameEngineService(28,10);
-        KeyboardController kb = new KeyboardController(game);
+        KeyboardController kb = new KeyboardController();
         kb.setPlayerService(playerService);
-        kb.setGameView(test);
 
-        test.show();
+        GameEngine gameEngineService = new GameEngine(28,10);
+        gameEngineService.setPlayerService(playerService);
+        gameEngineService.start();
+
     }
 
 }

@@ -1,4 +1,4 @@
-package bellosqueues.spacexplosions.persistence.model.position.grid;
+package bellosqueues.spacexplosions.persistence.model.position;
 
 import bellosqueues.spacexplosions.persistence.model.position.AbstractPosition;
 import bellosqueues.spacexplosions.persistence.model.position.Position;

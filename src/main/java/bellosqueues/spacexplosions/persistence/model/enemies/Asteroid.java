@@ -6,11 +6,11 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class Asteroid extends Obstacles {
 
     LogicPosition position;
-    private Picture asteroid;
+
+    public Asteroid(){};
 
     public Asteroid(LogicPosition position){
         this.position = position;
-        asteroid = new Picture(position.getCol(), position.getRow(), "src/main/resources/images/asteroids.png");
     }
 
     @Override

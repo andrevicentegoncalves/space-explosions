@@ -11,16 +11,14 @@ public class EnemiesFactory<T> {
 
     LogicPosition position;
 
-    public Obstacles displayEnemies(ObstaclesTypes obstaclesTypes, LogicPosition position){
-
-      this.position = position;
+    public static Obstacles createObstacle(ObstaclesTypes obstaclesTypes, Position position){
 
         switch (obstaclesTypes) {
             case ENEMY:
                 return new Enemy();
 
             case ASTEROID:
-                return new Asteroid(position);
+                return new Asteroid();
 
         }
 

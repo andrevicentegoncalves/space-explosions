@@ -1,7 +1,9 @@
 package bellosqueues.spacexplosions.services;
 
 import bellosqueues.spacexplosions.persistence.model.Player;
+import bellosqueues.spacexplosions.persistence.model.position.SimpleGfxPosition;
 import bellosqueues.spacexplosions.utilities.Directions;
+import bellosqueues.spacexplosions.utilities.PicturePaths;
 
 public class PlayerService {
 

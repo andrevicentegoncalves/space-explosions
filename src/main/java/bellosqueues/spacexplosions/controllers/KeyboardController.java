@@ -1,6 +1,6 @@
 package bellosqueues.spacexplosions.controllers;
 
-import bellosqueues.spacexplosions.services.GameEngineService;
+import bellosqueues.spacexplosions.services.GameEngine;
 import bellosqueues.spacexplosions.services.PlayerService;
 import bellosqueues.spacexplosions.views.GameView;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
@@ -11,12 +11,11 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class KeyboardController implements KeyboardHandler {
 
-  private GameEngineService game;
+  private GameEngine game;
   private PlayerService playerService;
   private GameView gameView;
 
-  public KeyboardController(GameEngineService game){
-    this.game = game;
+  public KeyboardController(){
     listenerInit();
   }
 
@@ -68,59 +67,46 @@ public class KeyboardController implements KeyboardHandler {
     switch (event.getKey()){
       // MOVE UP
       case KeyboardEvent.KEY_W:
-        gameView.moveView(Directions.UP);
         playerService.movePlayer(Directions.UP);
 
         break;
 
       // MOVE DOWN
       case KeyboardEvent.KEY_S:
-        gameView.moveView(Directions.DOWN);
         playerService.movePlayer(Directions.DOWN);
 
         break;
 
       // MOVE LEFT
       case KeyboardEvent.KEY_A:
-        gameView.moveView(Directions.LEFT);
         playerService.movePlayer(Directions.LEFT);
 
         break;
 
       // MOVE RIGHT
       case KeyboardEvent.KEY_D:
-        gameView.moveView(Directions.RIGHT);
         playerService.movePlayer(Directions.RIGHT);
 
         break;
 
       // START GAME
       case KeyboardEvent.KEY_SPACE:
-        if(game.isKeySpace()) {
-          //game.setStartMainMenu();
-          game.start();
-      }
+
         break;
 
       // RESTART GAME
       case KeyboardEvent.KEY_R:
-        if(game.isKeyRestart()) {
 
-        }
         break;
 
       // MUTE
       case KeyboardEvent.KEY_M:
-        if(game.isKeyMute()) {
 
-        }
         break;
 
       // FIRE
       case KeyboardEvent.KEY_F:
-        if(game.isKeyFire()) {
 
-        }
         break;
 
       // QUIT
@@ -134,11 +120,11 @@ public class KeyboardController implements KeyboardHandler {
   public void keyReleased(KeyboardEvent keyboardEvent) {
   }
 
-  public GameEngineService getGame() {
+  public GameEngine getGame() {
     return game;
   }
 
-  public void setGame(GameEngineService game) {
+  public void setGame(GameEngine game) {
     this.game = game;
   }
 
