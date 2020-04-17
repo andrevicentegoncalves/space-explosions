@@ -10,8 +10,8 @@ WASD -> move spaceship
 
 People involved:
 
-André Gonçalves, https://www.linkedin.com/in/andrevicentegoncalves/, https://github.com/andrevicentegoncalves
+André Gonçalves, https://github.com/andrevicentegoncalves, https://www.linkedin.com/in/andrevicentegoncalves/  ;
 
-André Pinho, https://www.linkedin.com/in/andre-segurado-pinho/, https://github.com/HigherArki
+André Pinho, https://github.com/HigherArki, https://www.linkedin.com/in/andre-segurado-pinho/ ;
 
-David Borges, https://www.linkedin.com/in/davidmsborges/, https://github.com/DavidBorges-2
+David Borges, https://github.com/DavidBorges-2, https://www.linkedin.com/in/davidmsborges/ ;
